@@ -64,3 +64,4 @@ D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.cs
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.genruntimeconfig.cache
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.csproj.AssemblyReference.cache
 D:\SportStoreFolder\SportsSln\SportsStore\bin\Debug\netcoreapp3.1\libman.json
+D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Views\Shared\ProductSummary.cshtml.g.cs
