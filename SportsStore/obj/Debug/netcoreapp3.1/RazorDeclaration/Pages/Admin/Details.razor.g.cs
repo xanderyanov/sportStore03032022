@@ -53,9 +53,8 @@ using SportsStore.Models;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin")]
-    public partial class Products : OwningComponentBase<IStoreRepository>
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products/details/{id:long}")]
+    public partial class Details : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -63,18 +62,17 @@ using SportsStore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "D:\SportStoreFolder\SportsSln\SportsStore\Pages\Admin\Products.razor"
+#line 14 "D:\SportStoreFolder\SportsSln\SportsStore\Pages\Admin\Details.razor"
        
-    public IStoreRepository Repository => Service;
-    public IEnumerable<Product> ProductData { get; set; }
-    protected async override Task OnInitializedAsync() {
-        await UpdateData();
+    [Inject]
+    public IStoreRepository Repository { get; set; }
+    [Parameter]
+    public long Id { get; set; }
+    public Product Product { get; set; }
+    protected override void OnParametersSet() {
+        Product = Repository.Products.FirstOrDefault(p => p.ProductID == Id);
     }
-    public async Task UpdateData() {
-        ProductData = await Repository.Products.ToListAsync();
-    }
-    public string GetDetailsUrl(long id) => $"/admin/products/details/{id}";
-    public string GetEditUrl(long id) => $"/admin/products/edit/{id}";
+    public string EditUrl => $"/admin/products/edit/{Product.ProductID}";
 
 #line default
 #line hidden

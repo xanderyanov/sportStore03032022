@@ -82,7 +82,6 @@ D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Ad
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Routed.razor.g.cs
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\_Imports.razor.g.cs
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Index.cshtml.g.cs
-D:\SportStoreFolder\SportsSln\SportsStore\bin\Debug\netcoreapp3.1\SportsStore.StaticWebAssets.xml
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.csproj.AssemblyReference.cache
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.GeneratedMSBuildEditorConfig.editorconfig
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.csproj.CoreCompileInputs.cache
@@ -90,3 +89,7 @@ D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclarati
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.RazorComponent.output.cache
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\OrderTable.razor.g.cs
 D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\SportsStore.genruntimeconfig.cache
+D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Details.razor.g.cs
+D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Details.razor.g.cs
+D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\Admin\Editor.razor.g.cs
+D:\SportStoreFolder\SportsSln\SportsStore\obj\Debug\netcoreapp3.1\Razor\Pages\Admin\Editor.razor.g.cs

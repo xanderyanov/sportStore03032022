@@ -53,9 +53,9 @@ using SportsStore.Models;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products")]
-    [Microsoft.AspNetCore.Components.RouteAttribute("/admin")]
-    public partial class Products : OwningComponentBase<IStoreRepository>
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products/edit/{id:long}")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/admin/products/create")]
+    public partial class Editor : OwningComponentBase<IStoreRepository>
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -63,18 +63,29 @@ using SportsStore.Models;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 42 "D:\SportStoreFolder\SportsSln\SportsStore\Pages\Admin\Products.razor"
+#line 40 "D:\SportStoreFolder\SportsSln\SportsStore\Pages\Admin\Editor.razor"
        
     public IStoreRepository Repository => Service;
-    public IEnumerable<Product> ProductData { get; set; }
-    protected async override Task OnInitializedAsync() {
-        await UpdateData();
+    [Inject]
+    public NavigationManager NavManager { get; set; }
+    [Parameter]
+    public long Id { get; set; } = 0;
+    public Product Product { get; set; } = new Product();
+    protected override void OnParametersSet() {
+        if (Id != 0) {
+            Product = Repository.Products.FirstOrDefault(p => p.ProductID == Id);
+        }
     }
-    public async Task UpdateData() {
-        ProductData = await Repository.Products.ToListAsync();
+    public void SaveProduct() {
+        if (Id == 0) {
+            Repository.CreateProduct(Product);
+        } else {
+            Repository.SaveProduct(Product);
+        }
+        NavManager.NavigateTo("/admin/products");
     }
-    public string GetDetailsUrl(long id) => $"/admin/products/details/{id}";
-    public string GetEditUrl(long id) => $"/admin/products/edit/{id}";
+    public string ThemeColor => Id == 0 ? "primary" : "warning";
+    public string TitleText => Id == 0 ? "Create" : "Edit";
 
 #line default
 #line hidden
